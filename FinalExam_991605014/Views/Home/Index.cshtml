@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Your Income Tracker</h1>
+    <p>Total Income for User ID 1: @ViewBag.TotalIncome</p>
+
+    <h3>Received Incomes:</h3>
+    <ul>
+        @foreach (var income in ViewBag.ReceivedIncomes)
+        {
+            <li>Description: @income.Description, Amount: @income.Amount</li>
+        }
+    </ul>
+</div>
+
